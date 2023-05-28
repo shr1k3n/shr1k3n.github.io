@@ -44,3 +44,17 @@
     font-size: 30px;
     font-family: Courier, monospace;
 }
+
+.manualQuestionsBox{
+    width: 50vw;
+    height: 100%;
+    margin: auto;
+    padding-bottom: 15% !important;
+    padding-top: 5% !important;
+}
+
+.manualInputAlertText{
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 !important;
+}
