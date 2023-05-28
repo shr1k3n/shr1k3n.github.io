@@ -1,4 +1,5 @@
 function testButton(){
-    alert('is working')
-    console.log("is working")
+    let testTagID = document.getElementById('testTag')
+
+    testTagID.innerHTML = "Title has changed"
 }
