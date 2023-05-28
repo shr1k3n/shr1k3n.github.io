@@ -1,0 +1,40 @@
+.enter_manually {
+    color: #24a3c4;
+    /*background-color: #7cc;*/
+    border-color: #24A3C488;
+    /*border: none;*/
+    border-radius: 15px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.enter_manually:hover {
+    background-color: #24a3c4;
+    border-color: #24A3C488;
+    color: white;
+    box-shadow: 0px 15px 20px #24A3C488;
+    transform: translateY(-3px);
+}
+
+.import_csv{
+    color: #1cad58;
+    /*background-color: #7cc;*/
+    border-color: #1CAD5889;
+    /*border: none;*/
+    border-radius: 15px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.import_csv:hover {
+    background-color: #1cad58;
+    border-color: #1CAD5889;
+    color: white;
+    box-shadow: 0px 15px 20px #1CAD5889;
+    transform: translateY(-3px);
+}
+.containerTop {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
