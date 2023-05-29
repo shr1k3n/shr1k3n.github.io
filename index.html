@@ -7,9 +7,33 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styling.css">
     <script src="https://kit.fontawesome.com/b32213cae1.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     <script src="client.js"></script>
 </head>
 <body>
+
+<div class="modal fade" id="viewCalculationsModal" tabindex="-1" aria-labelledby="viewCalculationsModalLabel" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="viewCalculationsModalLabel" style="font-size: 15px;">Results</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="itemblock" class="alert alert-primary" role="alert">
+                    <h3 class="alert-heading">Here is your margin</h3>
+                    <hr>
+                    <div id="modaldata">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div id="pagecontainer">
 
@@ -33,58 +57,7 @@
                 <p style="font-weight: bold; font-size: 15pt; padding-top: 10px !important;">Enter Manually</p></button>
         </div>
     </div>
-
-<!--    <div class="manualQuestionsBox">-->
-<!--        <div>-->
-<!--            <div id="monthlyincomeheader" class="alert alert-success" role="alert"><p class="alert-heading manualInputAlertText">What is your monthly income?</p></div>-->
-<!--            <div class="input-group mb-4"><label class="input-group-text" for="monthlyincome">Monthly Income &nbsp;&nbsp;&nbsp;<b>$</b></label> <input id="monthlyincome" type="number" class="form-control form-control-lg"></div>-->
-<!--        </div>-->
-<!--        <div>-->
-<!--            <div id="carexpenses" class="alert alert-danger" role="alert"><p class="alert-heading manualInputAlertText">Car Expenses</p></div>-->
-<!--            <div class="input-group mb-4"><label class="input-group-text" for="carpayment">Car Payment &nbsp;&nbsp;&nbsp;<b>$</b></label> <input id="carpayment" type="number" class="form-control form-control-lg"></div>-->
-<!--            <div class="input-group mb-4"><label class="input-group-text" for="carinsurance">Car Insurance &nbsp;&nbsp;&nbsp;<b>$</b></label> <input id="carinsurance" type="number" class="form-control form-control-lg"></div>-->
-<!--            <div class="input-group mb-4"><label class="input-group-text" for="carrepairs">Car Repairs &nbsp;&nbsp;&nbsp;<b>$</b></label> <input id="carrepairs" type="number" class="form-control form-control-lg"></div>-->
-<!--        </div>-->
-<!--        <div>-->
-<!--            <div id="housingexpenses" class="alert alert-danger" role="alert"><p class="alert-heading manualInputAlertText">Housing Expenses</p></div>-->
-<!--            <div class="input-group mb-4"><label class="input-group-text" for="rent">Rent &nbsp;&nbsp;&nbsp;<b>$</b></label> <input id="rent" type="number" class="form-control form-control-lg"></div>-->
-<!--            <div class="input-group mb-4"><label class="input-group-text" for="electric">Electric &nbsp;&nbsp;&nbsp;<b>$</b></label> <input id="electric" type="number" class="form-control form-control-lg"></div>-->
-<!--            <div class="input-group mb-4"><label class="input-group-text" for="wifi">Wi-Fi &nbsp;&nbsp;&nbsp;<b>$</b></label> <input id="wifi" type="number" class="form-control form-control-lg"></div>-->
-<!--        </div>-->
-<!--        <div>-->
-<!--            <div id="subscriptionexpenses" class="alert alert-danger" role="alert"><p class="alert-heading manualInputAlertText">Subscriptions</p></div>-->
-<!--            <div style="width: 100%;">-->
-<!--                <div class="input-group mb-4"><label class="input-group-text" for="subscription1"><select class="form-select" id="comingFromBins">-->
-<!--                    <option selected>-</option>-->
-<!--                    <option>Disney +</option>-->
-<!--                    <option>Hulu</option>-->
-<!--                    <option>Amazon Prime</option>-->
-<!--                    <option>HBO Max</option>-->
-<!--                    <option>Netflix</option>-->
-<!--                    <option>WordPress</option>-->
-<!--                    <option>Phone Bill</option>-->
-<!--                </select> &nbsp;&nbsp;&nbsp;<b>$</b></label>-->
-<!--                    <input id="subscription1" type="number" class="form-control form-control-lg"></div>-->
-<!--            </div>-->
-<!--            <div style="width: 100%; text-align: center; padding-bottom: 10px;">-->
-<!--                <i class="fa-solid fa-circle-plus fa-3x"></i>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div>-->
-<!--            <div id="otherexpenses" class="alert alert-danger" role="alert"><p class="alert-heading manualInputAlertText">Weekly Expenses</p></div>-->
-<!--            <div class="input-group mb-4"><label class="input-group-text" for="cargas">Gas &nbsp;&nbsp;&nbsp;<b>$</b></label> <input id="cargas" type="number" class="form-control form-control-lg"></div>-->
-<!--            <div class="input-group mb-4"><label class="input-group-text" for="groceries">Groceries &nbsp;&nbsp;&nbsp;<b>$</b></label> <input id="groceries" type="number" class="form-control form-control-lg"></div>-->
-<!--            <div class="input-group mb-4"><label class="input-group-text" for="dining">Dining &nbsp;&nbsp;&nbsp;<b>$</b></label> <input id="dining" type="number" class="form-control form-control-lg"></div>-->
-<!--            <div class="input-group mb-4"><label class="input-group-text" for="entertainment">Entertainment &nbsp;&nbsp;&nbsp;<b>$</b></label> <input id="entertainment" type="number" class="form-control form-control-lg"></div>-->
-<!--        </div>-->
-
-<!--        <div style="width: 100%; text-align: center;">-->
-<!--            <button type="button" class="btn btn-lg btn-success" onclick="calculateSpinner()" data-bs-dismiss="modal">Calculate</button>-->
-<!--        </div>-->
-<!--    </div>-->
-
-
-    <!--pagecontainer Ending Tag -->
+    
 </div>
 
 </body>
