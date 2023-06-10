@@ -37,6 +37,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 10%;
 }
 
 .pageHeader {
@@ -61,4 +62,37 @@
 
 .calculateResultsText{
     font-size: 16px;
+}
+
+.weekly_button {
+    color: #1154CCFF;
+    /*background-color: #7cc;*/
+    border-color: #0b3886;
+    /*border: none;*/
+    border-radius: 15px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+.weekly_button:hover {
+    background-color: #1154CCFF;
+    border-color: #0b3886;
+    color: white;
+    box-shadow: 0px 15px 20px #0b3886;
+    transform: translateY(-3px);
+}
+
+.monthly_button {
+    color: #c40b0b;
+    /*background-color: #7cc;*/
+    border-color: #7a0707;
+    /*border: none;*/
+    border-radius: 15px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.monthly_button:hover {
+    background-color: #c40b0b;
+    border-color: #7a0707;
+    color: white;
+    box-shadow: 0px 15px 20px #7a0707;
+    transform: translateY(-3px);
 }

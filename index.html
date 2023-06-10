@@ -28,8 +28,7 @@
                     </div>
                 </div>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <div id="modalfooter" class="modal-footer">
             </div>
         </div>
     </div>
@@ -37,28 +36,33 @@
 
 <div id="pagecontainer">
 
-    <div style="width: 100%; text-align: center;">
+
+    <div style="width: 100%; text-align: center; padding-top: 10%">
         <p class="pageHeader">
-        How Would You Like To Begin Budgeting?
+            How Would You Like To Begin Budgeting?
         </p>
     </div>
 
     <div class="containerTop">
         <div style="height: 40%; width: 30%; padding-right: 5%;">
-        <button class="btn import_csv btn-sq-responsive"
-                style="display: block; height: 100%; width: 100%;" onclick="" type="button"><i
-                style="padding-top: 5%;" class="fa-solid fa-file-csv fa-3x"></i>
-            <p style="font-weight: bold; font-size: 15pt; padding-top: 10px !important;">Import CSV</p></button>
+            <button class="btn weekly_button btn-sq-responsive"
+                    style="display: block; height: 100%; width: 100%;" onclick="swapToWeekly()" type="button"><i
+                    style="padding-top: 5%;" class="fa-solid fa-calendar-week fa-3x"></i>
+                <p style="font-weight: bold; font-size: 15pt; padding-top: 10px !important;">Weekly</p></button>
         </div>
         <div style="height: 40%; width: 30%;padding-left: 5%;">
-            <button class="btn enter_manually btn-sq-responsive"
-                    style="display: block; height: 100%; width: 100%;" onclick="swapToManualEntry()" type="button"><i
-                    style="padding-top: 5%" class="fa-solid fa-pen-to-square fa-3x"></i>
-                <p style="font-weight: bold; font-size: 15pt; padding-top: 10px !important;">Enter Manually</p></button>
+            <button class="btn monthly_button btn-sq-responsive"
+                    style="display: block; height: 100%; width: 100%;" onclick="swapToMonthly()" type="button"><i
+                    style="padding-top: 5%" class="fa-solid fa-calendar-days fa-3x"></i>
+                <p style="font-weight: bold; font-size: 15pt; padding-top: 10px !important;">Monthly</p></button>
         </div>
     </div>
 
+
+    <!--pagecontainer Ending Tag -->
 </div>
 
+
+<script src="weekly_client.js"></script>
 </body>
 </html>
